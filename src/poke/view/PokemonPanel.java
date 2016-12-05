@@ -67,8 +67,67 @@ private void setupLayout()
 	
 }
 
+private void setupDropdown()
+{
+	
+}
+
 private void setupListeners()
 {
 	
 }
+
+private void changeColorBasedOnData(String data)
+{
+	if (data.contains("Electric"))
+	{
+		this.setBackground(Color.YELLOW);
+	}
+	else if (data.contains("Fire"))
+	{
+		this.setBackground(Color.RED);
+	}
+	else if (data.contains("Water"))
+	{
+		this.setBackground(Color.BLUE);
+	}
+	
+	repaint();
+	
 }
+
+private void changeImageDisplay(String name)
+{
+	String path = "/poke/view/images";
+	String defaultName = "ultraball";
+	String extension = ".png";
+	try
+	{
+		pokemonIcon = new ImageIcon(getClass().getResource(path + name + extension));
+	}
+	catch (NullPointerException missFile)
+	{
+		pokemonIcon = new ImageIcon(getClass().getResource(path + defaultName + extension));
+	}
+	
+	pokemonLabel.setIcon(pokemonIcon);
+	repaint();
+}
+
+private boolean isValidDouble(String input)
+{
+	
+}
+
+private boolean isValidInterger(String input)
+{
+	
+}
+
+private boolean isValidName(String name)
+{
+	
+}
+
+}
+

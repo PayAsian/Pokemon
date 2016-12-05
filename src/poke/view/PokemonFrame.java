@@ -27,4 +27,9 @@ public class PokemonFrame extends JFrame
 		this.setVisible(true);
 		
 	}
+	
+	public void PokemonFrame()
+	{
+		testedFrame.getTitle = true;
+	}
 }
